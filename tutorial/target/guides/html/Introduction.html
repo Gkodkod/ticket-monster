@@ -1,0 +1,2299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="Burr Sutter">
+<title>Introduction &amp; Getting Started</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>Introduction &amp; Getting Started</h1>
+<div class="details">
+<span id="author" class="author">Burr Sutter</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_purpose_and_target_audience">Purpose and Target Audience</a></li>
+<li><a href="#_installation">Installation</a></li>
+<li><a href="#_creating_a_new_java_ee_6_project_with_maven">Creating a new Java EE 6 project with Maven</a></li>
+<li><a href="#_exploring_the_newly_generated_project">Exploring the newly generated project</a></li>
+<li><a href="#_adding_a_new_entity_using_forge">Adding a new entity using Forge</a></li>
+<li><a href="#_reviewing_persistence_xml_updating_import_sql">Reviewing persistence.xml &amp; updating import.sql</a></li>
+<li><a href="#_adding_a_new_entity_using_jboss_developer_studio">Adding a new entity using JBoss Developer Studio</a></li>
+<li><a href="#_deployment">Deployment</a></li>
+<li><a href="#_adding_a_jax_rs_restful_web_service">Adding a JAX-RS RESTful web service</a></li>
+<li><a href="#_adding_a_jquery_mobile_client_application">Adding a jQuery Mobile client application</a></li>
+<li><a href="#_conclusion">Conclusion</a>
+<ul class="sectlevel2">
+<li><a href="#_cleaning_up_the_generated_code">Cleaning up the generated code</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_purpose_and_target_audience">Purpose and Target Audience</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The target audience for this tutorial are those individuals who do not yet have a great deal of experience with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Eclipse + JBoss Tools (JBoss Developer Studio)</p>
+</li>
+<li>
+<p>JBoss Enterprise Application Platform 6.3</p>
+</li>
+<li>
+<p>Java EE 6 features like JAX-RS</p>
+</li>
+<li>
+<p>HTML5 &amp; jQuery for building an mobile web front-end.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This tutorial sets the stage for the creation of TicketMonster - our sample application that illustrates how to bring together the best features of <strong>Java EE 6 + HTML5 + JBoss</strong> to create a rich, mobile-optimized and dynamic application.</p>
+</div>
+<div class="paragraph">
+<p>TicketMonster is developed as an open source application, and you can find it <a href="https://github.com/jboss-jdf/ticket-monster">at github</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you prefer to watch instead of read, a large portion of this content is also covered in <a href="http://docs.jboss.org/tools/movies/">video form</a>.</p>
+</div>
+<div class="paragraph">
+<p>In this tutorial, we will cover the following topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Working with JBoss Developer Studio (Eclipse + JBoss Tools)</p>
+</li>
+<li>
+<p>Creating of a Java EE 6 project via a Maven archetype</p>
+</li>
+<li>
+<p>Leveraging m2e and m2e-wtp</p>
+</li>
+<li>
+<p>Using Forge to create a JPA entity</p>
+</li>
+<li>
+<p>Using Hibernate Tools</p>
+</li>
+<li>
+<p>Database Schema Generation</p>
+</li>
+<li>
+<p>Deployment to a local JBoss Server</p>
+</li>
+<li>
+<p>Adding a JAX-RS endpoint</p>
+</li>
+<li>
+<p>Adding a jQuery Mobile client</p>
+</li>
+<li>
+<p>Using the Mobile BrowserSim</p>
+</li>
+</ul>
+</div>
+<div id="jbds5_mobile_browsersim_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jbds8_mobile_browsersim.png" alt="jbds8 mobile browsersim">
+</div>
+<div class="title">Figure 1. JBoss Developer Studio 8 with Mobile BrowserSim</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation">Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The first order of business is to get your development environment setup and JBoss Developer Studio v8 installed. JBoss Developer Studio is Eclipse Luna (e4.4) for Java EE Developers plus select JBoss Tools and is available for free. Visit <a href="http://www.jboss.org/products/devstudio/download" class="bare">http://www.jboss.org/products/devstudio/download</a> to download it.  You may also choose to install JBoss Tools 4.2 into your existing Eclipse for Java EE Developers installation. This document uses screenshots depicting JBoss Developer Studio.</p>
+</div>
+<div class="paragraph">
+<p>You must have a Java Development Kit (JDK) installed. Java 7 JDK is recommended - whilst a JVM runtime will work for most use cases, for a developer environment it is normally best to have the full JDK.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you prefer to see JBoss Developer Studio being installed,
+then check out <a href="http://vimeo.com/39606090">this video</a>.</p>
+</div>
+<div class="paragraph">
+<p>To see JBoss Tools being installed into Eclipse, see
+<a href="http://vimeo.com/39743315">this video</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The JBoss Developer Studio installer has a (very long!) name such as <code>jboss-devstudio-8.0.0.GA-v20141020-1042-B317-installer-standalone.jar</code>
+where the latter portion of the file name relates to build date and version information and the text near the front related to the target operating system. The "universal" installer is for any operating system.  To launch the installer you may simply be able to double-click on the .jar file name or you may need to issue the following from the operating system command line:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>java -jar jboss-devstudio-8.0.0.GA-v20141020-1042-B317-installer-standalone.jar</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We recommend using the "universal" installer as it handles Windows, Mac OS X and Linux - 32-bit and 64-bit versions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Even if you are installing on a 64-bit OS, you may still wish
+to use the 32-bit JVM for the JBoss Developer Studio (or
+Eclipse + JBoss Tools). Only the 32-bit version provides a
+supported version of the Visual Page Editor - a split-pane
+editor that gives you a glimpse of what your HTML/XHTML (JSF,
+ JSP, etc) will look like.
+Also, the 32-bit version uses less memory than the 64-bit
+version. You may still run your application server in 64-bit
+JVMs if needed to insure compatibility with the production
+environment whilst keeping your IDE in 32-bit mode.
+Visual Page Editor has experimental support for 64-bit JVMs in JBoss
+Developer Studio 8. Please refer <a href="https://community.jboss.org/wiki/JBosstoolsVisualEditorFAQ">the JBoss Tools Visual Editor FAQ</a> for details.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="installer-wizard_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/installer_wizard_page1.png" alt="installer wizard page1">
+</div>
+<div class="title">Figure 2. Installation Wizard, Step 1 of 9</div>
+</div>
+<div class="paragraph">
+<p>The rest of the steps are fairly self explanatory.  If you run into trouble, please consult the videos above as they explore a few troubleshooting tips related to JRE/JDK setup.</p>
+</div>
+<div class="paragraph">
+<p>You can skip the step in the installation wizard that allows you to install JBoss Enterprise Application Platform 6.3 as we will do this in the next step.</p>
+</div>
+<div class="paragraph">
+<p>Once installed, launch JBoss Developer Studio. Please make sure to say <strong>Yes</strong> to the prompt that says "Will you allow JBoss Tools team to receive anonymous usage statistics for this Eclipse instance with JBoss Tools?".  This information is very helpful to us when it comes to prioritizing our QA efforts in terms of operating system platforms. More information concerning our usage tracking can be found at <a href="http://www.jboss.org/tools/usage" class="bare">http://www.jboss.org/tools/usage</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_new_java_ee_6_project_with_maven">Creating a new Java EE 6 project with Maven</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For a deeper dive into the world of Maven and how it is used with
+JBoss Developer Studio and JBoss Enterprise Application
+Platform 6 review <a href="http://vimeo.com/39796236">this video</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now that everything is properly installed, configured, running and verified to work, let&#8217;s build something "from scratch".</p>
+</div>
+<div class="paragraph">
+<p>We recommend that you switch to the JBoss Perspective if you have not already.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you close JBoss Central, it is only a click away - simply
+click on the JBoss icon in the Eclipse toolbar - it is normally
+the last icon, on the last row - assuming you are in the JBoss
+Perspective.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>First, select <strong>Start from scratch &#8594; Java EE Web Project</strong> in JBoss Central. Under the covers, this uses a Maven archetype which creates a Java EE 6 web application (.war), based around Maven.  The project can be built outside of the IDE, and in continuous integration solutions like Hudson/Jenkins.</p>
+</div>
+<div id="jboss-central_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jboss_dev_studio_jboss_central.png" alt="jboss dev studio jboss central">
+</div>
+<div class="title">Figure 3. JBoss Central</div>
+</div>
+<div class="paragraph">
+<p>You will be prompted with a dialog box that verifies that JBoss Developer Studio is configured correctly. If you are in a brand new workspace, the application server will not be configured yet and you will notice the lack of a check mark on the server/runtime row.</p>
+</div>
+<div id="new-project-wizard_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/new_project_wizard.png" alt="new project wizard">
+</div>
+<div class="title">Figure 4. New Project Wizard</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There are several ways to add JBoss Enterprise Application
+Platform 6 to JBoss Developer Studio. The
+<strong>Install&#8230;&#8203;</strong> button on the new project wizard is probably the
+easiest, but you can use any of the methods you are familiar
+with!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To add JBoss Enterprise Application Platform, click on the <strong>Install&#8230;&#8203;</strong> button, or if you have not yet downloaded and unzipped the server, click on the <strong>Download and Install&#8230;&#8203;</strong> button.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The download option only works with the community application
+server. Although the enterprise application server is listed, it
+still needs to be manually downloaded.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Selecting <strong>Install&#8230;&#8203;</strong> will pop up the JBoss Runtime Detection section of Preferences.  You can always get back to this dialog by selecting <strong>Preferences &#8594; JBoss Tools &#8594; JBoss Tools Runtime Detection</strong>.</p>
+</div>
+<div id="jboss_tools_runtime_detection_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jboss_tools_runtime_detection.png" alt="jboss tools runtime detection">
+</div>
+<div class="title">Figure 5. JBoss Tools Runtime Detection</div>
+</div>
+<div class="paragraph">
+<p>Select the <strong>Add</strong> button which will take you to a file browser dialog where you should locate your unzipped JBoss server.</p>
+</div>
+<div id="runtime_open_dialog_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/runtime_open_dialog.png" alt="runtime open dialog">
+</div>
+<div class="title">Figure 6. Runtime Open Dialog</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>Open</strong> and JBoss Developer Studio will pop up the <strong>Searching for runtimes&#8230;&#8203;</strong> window.</p>
+</div>
+<div id="searching_for_runtimes_dialog_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/searching_for_runtimes_dialog.png" alt="searching for runtimes dialog">
+</div>
+<div class="title">Figure 7. Searching for runtimes window</div>
+</div>
+<div class="paragraph">
+<p>Simply select <strong>OK</strong>. You should see the added runtime in the Paths list.</p>
+</div>
+<div id="jboss_tools_runtime_detection_after_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jboss_tools_runtime_detection_after.png" alt="jboss tools runtime detection after">
+</div>
+<div class="title">Figure 8. JBoss Tools Runtime Detection Completed</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>OK</strong> to close the <strong>Preferences</strong> dialog, and you will be returned to the <strong>New Project Example</strong> dialog, with the the server/runtime found.</p>
+</div>
+<div id="as_eap_found_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/as_eap_found.png" alt="as eap found">
+</div>
+<div class="title">Figure 9. JBoss AS 7.0/7.1 or EAP 6 Found</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Target Runtime</strong> allows you to choose between JBoss Enterprise Application Platform and JBoss AS 7. If it is left empty, JBoss AS 7 will be elected.</p>
+</div>
+<div class="paragraph">
+<p>Proceed to select the EAP 6.3 runtime, you just created.</p>
+</div>
+<div id="eap_selected_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/as_eap_selected.png" alt="as eap selected">
+</div>
+<div class="title">Figure 10. JBoss EAP 6 runtime selected</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Choosing an enterprise application server as the runtime will require you to
+configure Maven to use the JBoss Enterprise Maven repositories. For detailed instructions on
+configure the Maven repositories, visit the <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html-single/Development_Guide/index.html#Install_the_JBoss_Enterprise_Application_Platform_6_Maven_Repository">JBoss Enterprise Application Platform 6.3 documentation</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You may see a warning (like the one in the screenshot), if you do not have the JBoss Enterprise Maven repository configured in your environment. Should this be the case, select the <strong>repository</strong> link in the warning, to open the JBoss Maven Integration wizard. The wizard dialog will prompt you to add the JBoss Enterprise Maven repository.</p>
+</div>
+<div id="add_jboss_maven_repo_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jboss_maven_repository.png" alt="jboss maven repository">
+</div>
+<div class="title">Figure 11. Add the JBoss Enterprise Maven repository</div>
+</div>
+<div class="paragraph">
+<p>Click <strong>Ok</strong>.</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll now be shown the proposed changes to your Maven settings.xml file. Click <strong>Finish</strong> after reviewing the proposed updates.</p>
+</div>
+<div id="update_settings_xml_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jboss_maven_repo_settings_xml.png" alt="jboss maven repo settings xml">
+</div>
+<div class="title">Figure 12. Update the Maven settings.xml file</div>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll be prompted to confirm the update. Click <strong>Yes</strong>.</p>
+</div>
+<div id="confirm_update_settings_xml_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/prompt_update_settings_xml.png" alt="prompt update settings xml">
+</div>
+<div class="title">Figure 13. Confirm the changes to the Maven settings.xml file</div>
+</div>
+<div class="paragraph">
+<p>The updates will now be persisted, and you&#8217;ll be returned to the original wizard.</p>
+</div>
+<div class="paragraph">
+<p>Now, select <strong>Next</strong> in the <strong>New Project</strong> wizard to proceed to the next step.</p>
+</div>
+<div id="new-project-wizard-step_2_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/new_project_example_step_2.png" alt="new project example step 2">
+</div>
+<div class="title">Figure 14. New Project Wizard Step 2</div>
+</div>
+<div class="paragraph">
+<p>The default <strong>Project name</strong> is <code>jboss-javaee6-webapp</code>. If this field appears blank, it is because your workspace already contains a "jboss-javaee6-webapp" in which case just provide another name for your project. Change the project name to <code>ticket-monster</code>, and the package name to <code>org.jboss.examples.ticketmonster</code>.</p>
+</div>
+<div class="paragraph">
+<p>Select <strong>Finish</strong>.</p>
+</div>
+<div class="paragraph">
+<p>JBoss Tools/JBoss Developer Studio will now generate the template project and import it into the workspace.  You will see it pop up into the Project Explorer and a message that asks if you would like to open the cheatsheet file associated with the project.</p>
+</div>
+<div id="prompt_for_readme_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/prompt_for_cheatsheet.png" alt="prompt for cheatsheet">
+</div>
+<div class="title">Figure 15. New Project Wizard Step 3</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>Finish</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exploring_the_newly_generated_project">Exploring the newly generated project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using the <strong>Project Explorer</strong>, open up the generated project, and double-click on the <code>pom.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p>The generated project is a Maven-based project with a <code>pom.xml</code> in its root directory.</p>
+</div>
+<div id="newly_generated_project_explorer_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/newly_generated_project_explorer.png" alt="newly generated project explorer">
+</div>
+<div class="title">Figure 16. Project Explorer</div>
+</div>
+<div class="paragraph">
+<p>JBoss Developer Studio and JBoss Tools include m2e and m2e-wtp. m2e is the Maven Eclipse plug-in and provides a graphical editor for editing <code>pom.xml</code> files, along with the ability to run maven goals directly from within Eclipse.  m2e-wtp allows you to deploy your Maven-based project directly to any Web Tools Project (WTP) compliant application server.  This means you can drag &amp; drop, use <strong>Run As &#8594; Run on Server</strong> and other mechanisms to have the IDE deploy your application.</p>
+</div>
+<div class="paragraph">
+<p>The <code>pom.xml</code> editor has several tabs along its bottom edge.</p>
+</div>
+<div id="pom_xml_tabs_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/pom_xml_tabs.png" alt="pom xml tabs">
+</div>
+<div class="title">Figure 17. pom.xml Editor Tabs</div>
+</div>
+<div class="paragraph">
+<p>For this tutorial, we do not need to edit the <code>pom.xml</code> as it already provides the Java EE 6 APIs that we will need (e.g. JPA, JAX-RS, CDI). You should spend some time exploring the <strong>Dependencies</strong> and the <strong>pom.xml</strong> (source view) tabs.</p>
+</div>
+<div class="paragraph">
+<p>One key element to make note of is <code>&lt;version.jboss.bom.eap&gt;6.3.2.GA&lt;/version.jboss.bom.eap&gt;</code> which establishes the version of the JBoss Enterprise Application Platform dependencies. The BOM (Bill of Materials) specifies the versions of the Java EE (and other) APIs defined in the dependency section.</p>
+</div>
+<div class="paragraph">
+<p>If you are using community version of the JBoss Application Server and you selected that as your Target Runtime, you will find a different property as the version string.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The specific version of the BOM (e.g. <code>6.3.2.GA</code>) is likely to change, so do not
+be surprised if the version is slightly different.</p>
+</div>
+<div class="paragraph">
+<p>The recommended version of the BOM for a runtime (EAP 6) can be
+obtained by visiting <a href="https://www.jboss.org/developer-materials/#!keyword=Java%20EE&amp;formats=jbossdeveloper_archetype%20jbossdeveloper_bom">the JBoss Stacks site</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="project_explorer_java_packages_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/project_explorer_java_packages.png" alt="project explorer java packages">
+</div>
+<div class="title">Figure 18. Project Explorer Java Packages</div>
+</div>
+<div class="paragraph">
+<p>Using the <strong>Project Explorer</strong>, drill-down into <code>src/main/java</code> under <strong>Java Resources</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The initial project includes the following Java packages:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>.controller</code></dt>
+<dd>
+<p>contains the backing beans for <code><mark>{newMember}</code> and <code></mark>{memberRegistration}</code> in the JSF page <code>index.xhtml</code></p>
+</dd>
+<dt class="hdlist1"><code>.data</code></dt>
+<dd>
+<p>contains a class which uses <code>@Produces</code> and <code>@Named</code> to return the list of members for <code>index.xhtml</code></p>
+</dd>
+<dt class="hdlist1"><code>.model</code></dt>
+<dd>
+<p>contains the JPA entity class, a POJO annotated with <code>@Entity</code>, annotated with Bean Validation (JSR 303) constraints</p>
+</dd>
+<dt class="hdlist1"><code>.rest</code></dt>
+<dd>
+<p>contains the JAX-RS endpoints, POJOs annotated with <code>@Path</code></p>
+</dd>
+<dt class="hdlist1"><code>.service</code></dt>
+<dd>
+<p>handles the registration transaction for new members</p>
+</dd>
+<dt class="hdlist1"><code>.util</code></dt>
+<dd>
+<p>contains Resources.java which sets up an alias for <code>@PersistenceContext</code> to be injectable via <code>@Inject</code></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Now, let&#8217;s explore the resources in the project.</p>
+</div>
+<div id="project_explorer_resources_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/project_explorer_resources.png" alt="project explorer resources">
+</div>
+<div class="title">Figure 19. Project Explorer Resources</div>
+</div>
+<div class="paragraph">
+<p>Under src you will find:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>main/resources/import.sql</code></dt>
+<dd>
+<p>contains insert statements that provides initial database data.  This is particularly useful when <code>hibernate.hbm2dll.auto=create-drop</code> is set in <code>persistence.xml</code>.  <code>hibernate.hbm2dll.auto=create-drop</code> causes the schema to be recreated each time the application is deployed.</p>
+</dd>
+<dt class="hdlist1"><code>main/resources/META-INF/persistence.xml</code></dt>
+<dd>
+<p>establishes that this project contains JPA entities and it identifies the datasource, which is deployed alongside the project. It also includes the <code>hibernate.hbm2dll.auto</code> property set to <code>create-drop</code> by default.</p>
+</dd>
+<dt class="hdlist1"><code>test/java/test</code></dt>
+<dd>
+<p>provides the <code>.test</code> package that contains <code>MemberRegistrationTest.java</code>, an Arquillian based test that runs both from within JBoss Developer Studio via <strong>Run As &#8594; JUnit Test</strong> and at the command line:</p>
+<div class="paragraph">
+<p><code>mvn test –Parq-jbossas-remote</code></p>
+</div>
+<div class="paragraph">
+<p>Note that you will need to start the JBoss Enterprise Application Platform 6.3 server before running the test.</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>src/main/webapp</code></dt>
+<dd>
+<p>contains <code>index.xhtml</code>, the JSF-based user interface for the sample application.  If you double-click on that file you will see Visual Page Editor allows you to visually navigate through the file and see the source simultaneously. Changes to the source are immediately reflected in the visual pane.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>In <code>src/main/webapp/WEB-INF</code>, you will find three key files:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>beans.xml</code></dt>
+<dd>
+<p>is an empty file that indicates this is a CDI capable EE6 application</p>
+</dd>
+<dt class="hdlist1"><code>faces-config.xml</code></dt>
+<dd>
+<p>is an empty file that indicates this is a JSF capable EE6 application</p>
+</dd>
+<dt class="hdlist1"><code>ticket-monster-ds.xml</code></dt>
+<dd>
+<p>when deployed, creates a new datasource within the JBoss container</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_new_entity_using_forge">Adding a new entity using Forge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are several ways to add a new JPA entity to your project:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Starting from scratch</dt>
+<dd>
+<p>Right-click on the <code>.model</code> package and select <strong>New &#8594; Class</strong>.  JPA entities are annotated POJOs so starting from a simple class is a common approach.</p>
+</dd>
+<dt class="hdlist1">Reverse Engineering</dt>
+<dd>
+<p>Right-click on the "model" package and select New &#8594; JPA Entities from Tables.  For more information on this technique see <a href="https://vimeo.com/39608294">this video</a></p>
+</dd>
+<dt class="hdlist1">Using Forge</dt>
+<dd>
+<p>to create a new entity for your project using a CLI (we will explore this in more detail below)</p>
+</dd>
+<dt class="hdlist1">Reverse Engineering with Forge</dt>
+<dd>
+<p>Forge has a Hibernate Tools plug-in that allows you to script the conversion of RDBMS schema into JPA entities.  For more information on this technique see <a href="https://vimeo.com/39608326">this video</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>For the purposes of this tutorial, we will take advantage of Forge to add a new JPA entity. This requires the least keystrokes, and we do not yet have a RDBMS schema to reverse engineer.  There is also an optional section for adding an entity using <strong>New &#8594; Class</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Select the project in the <strong>Project Navigator</strong> view of JBoss Developer Studio and enter the <strong>Ctrl + 4</strong> (in Windows/Linux) or <strong>Cmd + 4</strong> (Mac) key combination.
+This will launch Forge if it is not started already.</p>
+</div>
+<div id="starting_forge_for_first_time_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_is_starting.png" alt="forge is starting">
+</div>
+<div class="title">Figure 20. Starting Forge for the first time</div>
+</div>
+<div class="paragraph">
+<p>The list of commands that you can execute in Forge will be visible in the Forge quick action menu.</p>
+</div>
+<div id="forge_action_menu_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_action_menu.png" alt="forge action menu">
+</div>
+<div class="title">Figure 21. Forge action menu</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you do not see a lot of commands in the quick action menu, then you may not have selected the project.
+The Forge quick action menu is contextual in nature, and therefore, it displays commands relevant to the current selection in the project explorer.</p>
+</div>
+<div class="paragraph">
+<p>When nothing is selected, then fewer commands are shown.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>An alternative method to activate Forge is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Window &#8594; Show View &#8594; Forge Console</strong>. Click the <strong>Start</strong> button in the view.</p>
+</li>
+</ul>
+</div>
+<div id="show_view_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/show_forge_view.png" alt="show forge view">
+</div>
+<div class="title">Figure 22. Launch the <strong>Show View</strong> dialog</div>
+</div>
+<div id="select_forge_view_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/select_forge_view.png" alt="select forge view">
+</div>
+<div class="title">Figure 23. Select the Forge Console view</div>
+</div>
+<div class="paragraph">
+<p>Note: Activating Forge this way displays the Forge console that allows you to
+execute the same commands via a shell interface.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can always start Forge using the green arrow (or
+stop via the red square) in the Forge Console tab.</p>
+</div>
+<div id="forge_start_stop_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_console_tab.png" alt="forge console tab">
+</div>
+<div class="title">Figure 24. Show Forge Start/Stop</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Forge is a multi-faceted rapid application development tool that allows you to enter commands that generate classes and code. You could use either a GUI within your IDE that offers a familar wizard and dialog based UI, or a shell-like interface to perform operations. It will automatically update the IDE for you. A key feature is "contentual command activation", launched by running the Forge shortcut (<strong>Ctrl + 4</strong> or <strong>Cmd + 4</strong>). For instance, launching Forge on a selected project activates different commands, than launching it in isolation, or for that matter launching Forge with a selected Java source file.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll generate an entity using the Forge GUI. Let&#8217;s work through this, step by step.</p>
+</div>
+<div class="paragraph">
+<p>We start by selecting the TicketMonster project. Launch Forge through the shortcut (<strong>Ctrl + 4</strong> or <strong>Cmd + 4</strong>).
+Type <code>jpa</code> in the command filter textbox located in the menu. The menu will filter out irrelevant entries, leaving you with JPA-specific commands.</p>
+</div>
+<div id="filter_commands_in_forge_menu_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_quick_action_menu_filter_jpa.png" alt="forge quick action menu filter jpa">
+</div>
+<div class="title">Figure 25. Filter commands in the Forge menu</div>
+</div>
+<div class="paragraph">
+<p>Select the "JPA: New Entity" entry in the menu. Click it or hit the <code>Enter</code> key to execute the command. You will be presented with a dialog where you can provide certain inputs that control how the new entity would be generated, like the package where the entity would be created, the name of the JPA entity/class, the primary-key strategy used for the entity etc.</p>
+</div>
+<div id="jpa_new_entity_forge_command_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_jpa_new_entity.png" alt="forge jpa new entity">
+</div>
+<div class="title">Figure 26. The new JPA entity command in Forge</div>
+</div>
+<div class="paragraph">
+<p>Specify the value of the entity as <code>Event</code> and click <code>Finish</code>. The defaults for other values are sufficient - note how Forge intelligently constructs the value for the package field from the Maven group Id and artifact Id values of the project.</p>
+</div>
+<div id="create_event_entity_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_jpa_new_entity_event.png" alt="forge jpa new entity event">
+</div>
+<div class="title">Figure 27. Create the Event entity in Forge</div>
+</div>
+<div class="paragraph">
+<p>You should see a notification bubble in Eclipse when Forge completes the action.</p>
+</div>
+<div id="create_event_entity_image_bubble" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_jpa_new_entity_created.png" alt="forge jpa new entity created">
+</div>
+<div class="title">Figure 28. The Forge notification bubble in Eclipse</div>
+</div>
+<div class="paragraph">
+<p>Forge would have created a JPA entity as instructed, and it would also open the Java source file in Eclipse. Note that it would have created not only a new class with the <code>@Entity</code> annotation, but also created a primary-key field named <code>id</code>, a <code>version</code> field, along with getters and setters for both, in addition to <code>equals</code>, <code>hashCode</code> and <code>toString</code> methods.</p>
+</div>
+<div id="event_entity_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_event_entity_source.png" alt="forge event entity source">
+</div>
+<div class="title">Figure 29. The newly created Event entity</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s add a new field to this entity. Select the <code>Event</code> class in the project navigator and launch the Forge menu once again. Filter on <code>jpa</code> as usual, and launch the "JPA: New Field" command.
+Specify the field name as <code>name</code>, to store the name of the event. The defaults are sufficient for other input fields. Click <code>Finish</code> or hit the <code>Enter</code> button as usual.</p>
+</div>
+<div id="jpa_new_field_wizard_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_jpa_new_field_name.png" alt="forge jpa new field name">
+</div>
+<div class="title">Figure 30. The JPA field wizard in Forge</div>
+</div>
+<div class="paragraph">
+<p>You will now notice that the <code>Event</code> class is enhanced with a <code>name</code> field of type <code>String</code>, as well as a getter and setter, along with modifications to the <code>toString</code> method.</p>
+</div>
+<div id="jpa_newly_created_field_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_added_name.png" alt="forge added name">
+</div>
+<div class="title">Figure 31. The newly created field in the Event class</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s now add Bean Validation (JSR-303) capabilities to the project. Launch the Forge menu, and filter for the "Constraint: Setup" command. Execute the command.</p>
+</div>
+<div id="filter_constraint_commands_in_forge_menu_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_quick_action_menu_filter_constraint.png" alt="forge quick action menu filter constraint">
+</div>
+<div class="title">Figure 32. Filter for constraint commands in the Forge menu</div>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll be presented with a choice on what Bean Validation providers you&#8217;d like to setup in the project. The defaults are sufficient - we&#8217;ll use the Bean Validation provider supplied by the Java EE application. Click <code>Finish</code> or hit <code>Enter</code> to setup Bean valdiation.</p>
+</div>
+<div id="setup_bean_validation_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_setup_constraint_wizard.png" alt="forge setup constraint wizard">
+</div>
+<div class="title">Figure 33. Setup Bean Validation</div>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll now add a constraint on the newly added <code>name</code> field in the <code>Event</code> class. Select the <code>Event</code> class in the project navigator and proceed to launch the "Constraint: Add" command from the Forge menu. Note that selecting the <code>Event</code> class allows Forge to provide commands relevant to this class in the action menu, as well as populating this class in input fields where it is fit to populate them.</p>
+</div>
+<div id="launch_add_constraint_wizard_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_add_constraint_on_event.png" alt="forge add constraint on event">
+</div>
+<div class="title">Figure 34. Select the Event class and launch the "Constraint: Add" wizard</div>
+</div>
+<div class="paragraph">
+<p>This launches a wizard where one can add Bean Validation constraints. The class to operate on will default to the currently selected class, i.e. <code>Event</code>. If you want to switch to a different class, you can do so in the wizard. There is no need to re-launch the wizard.</p>
+</div>
+<div id="default_value_for_constraint_add_command_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_select_event_entity_for_constraint.png" alt="forge select event entity for constraint">
+</div>
+<div class="title">Figure 35. The constraint is added to the selected class</div>
+</div>
+<div class="paragraph">
+<p>Proceed to select the <code>name</code> field, on which we add a <code>NotNull</code> constraint. Click <code>Finish</code> or hit <code>Enter</code>.</p>
+</div>
+<div id="add_notnull_constraint_event_name_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_constraint_add_notnull_on_name.png" alt="forge constraint add notnull on name">
+</div>
+<div class="title">Figure 36. Add a NotNull constraint on Event name</div>
+</div>
+<div class="paragraph">
+<p>Similarly, add a <code>Size</code> constraint with <code>min</code> and <code>max</code> values of 5 and 50 respectively on the <code>name</code> field.</p>
+</div>
+<div id="add_size_constraint_event_name_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_constraint_add_size_on_name.png" alt="forge constraint add size on name">
+</div>
+<div class="title">Figure 37. Add a Size constraint on Event name</div>
+</div>
+<div id="attribute_values_size_constraint_on_name_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_constraint_add_set_size_attributes_on_name.png" alt="forge constraint add set size attributes on name">
+</div>
+<div class="title">Figure 38. Specify attribute values for the Size constraint</div>
+</div>
+<div class="paragraph">
+<p>From this point forward, we will assume you have the basics of using Forge&#8217;s menu and the commands executed thus far. Add a new field <code>description</code> to the Event class.</p>
+</div>
+<div id="add_description_field_to_event_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_jpa_new_field_description.png" alt="forge jpa new field description">
+</div>
+<div class="title">Figure 39. Add the description field to Event</div>
+</div>
+<div class="paragraph">
+<p>Add a <code>Size</code> constraint on the description field to the event class, with <code>min</code> and <code>max</code> values of 20 and 1000 respectively.</p>
+</div>
+<div id="add_size_constraint_event_description_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_constraint_add_size_on_description.png" alt="forge constraint add size on description">
+</div>
+<div class="title">Figure 40. Add a Size constraint on Event name</div>
+</div>
+<div id="attribute_values_size_constraint_on_description_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_constraint_add_set_size_attributes_on_description.png" alt="forge constraint add set size attributes on description">
+</div>
+<div class="title">Figure 41. Specify attribute values for the Size constraint</div>
+</div>
+<div class="paragraph">
+<p>Add a new <code>boolean</code> field <code>major</code>. Note - you will need to change the type to <code>boolean</code> from the default value of <code>String</code>.</p>
+</div>
+<div id="add_major_field_to_event_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_jpa_new_field_major.png" alt="forge jpa new field major">
+</div>
+<div class="title">Figure 42. Add the major field to Event</div>
+</div>
+<div class="paragraph">
+<p>Add another field <code>picture</code> to the Event class.</p>
+</div>
+<div id="add_picture_field_to_event_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/forge_jpa_new_field_picture.png" alt="forge jpa new field picture">
+</div>
+<div class="title">Figure 43. Add the picture field to Event</div>
+</div>
+<div class="paragraph">
+<p>The easiest way to see the results of Forge operating on the <code>Event.java</code> JPA Entity is to use the <strong>Outline View</strong> of JBoss Developer Studio. It is normally on the right-side of the IDE when using the JBoss Perspective.</p>
+</div>
+<div id="outline_of_event_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/outline_of_event.png" alt="outline of event">
+</div>
+<div class="title">Figure 44. Outline View</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, you could perform the same sequence of operations in the Forge Console, using these commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="fsh" class="language-fsh hljs">jpa-new-entity --named Event --targetPackage org.jboss.examples.ticketmonster.model ;
+jpa-new-field --named name ;
+constraint-setup ;
+constraint-add --onProperty name --constraint NotNull ;
+constraint-add --onProperty name --constraint Size --min 5 --max 50 --message "An event's name must contain between 5 and 50 characters" ;
+jpa-new-field --named description ;
+constraint-add --onProperty description --constraint Size --min 20 --max 1000 --message "An event's description must contain between 20 and 1000 characters" ;
+jpa-new-field --named major --type boolean ;
+jpa-new-field --named picture ;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reviewing_persistence_xml_updating_import_sql">Reviewing persistence.xml &amp; updating import.sql</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, the entity classes generate the database schema, and is controlled by <code>src/main/resources/persistence.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p>The two key settings are the <code>&lt;jta-data-source&gt;</code> and the <code>hibernate.hbm2ddl.auto</code> property.  The datasource maps to the datasource defined in <code>src\main\webapp\ticket-monster–ds.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>hibernate.hbm2ddl.auto=create-drop</code> property indicates that all database tables will be dropped when an application is undeployed, or redeployed, and created when the application is deployed.</p>
+</div>
+<div class="paragraph">
+<p>The <code>import.sql</code> file contains SQL statements that will inject sample data into your initial database structure.  Add the following insert statements:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="sql" class="language-sql hljs">insert into Event (id, name, description, major, picture, version) values (1, 'Shane''s Sock Puppets', 'This critically acclaimed masterpiece...', true, 'http://dl.dropbox.com/u/65660684/640px-Carnival_Puppets.jpg', 1);
+insert into Event (id, name, description, major, picture, version) values (2, 'Rock concert of the decade', 'Get ready to rock...', true, 'http://dl.dropbox.com/u/65660684/640px-Weir%2C_Bob_(2007)_2.jpg', 1);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_new_entity_using_jboss_developer_studio">Adding a new entity using JBoss Developer Studio</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Alternatively, we can add an entity with JBoss Developer Studio or JBoss Tools.</p>
+</div>
+<div class="paragraph">
+<p>First, right-click on the <code>.model</code> package and select <strong>New &#8594; Class</strong>.  Enter the class name as <code>Venue</code> - our concerts &amp; shows happen at particular stadiums, concert halls and theaters.</p>
+</div>
+<div class="paragraph">
+<p>First, add some private fields representing the entities properties, which translate to the columns in the database table.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="java" class="language-java hljs">package org.jboss.examples.ticketmonster.model;
+
+public class Venue {
+	private Long id;
+	private String name;
+	private String description;
+	private int capacity;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, right-click on the editor itself, and from the pop-up, context menu select <strong>Source &#8594; Generate Getters and Setters</strong>.</p>
+</div>
+<div id="generate_getters_setters_menu_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/generate_getters_setters.png" alt="generate getters setters">
+</div>
+<div class="title">Figure 45. Generate Getters and Setters Menu</div>
+</div>
+<div class="paragraph">
+<p>This will create accessor and mutator methods for all your fields, making them accessible properties for the entity class.</p>
+</div>
+<div id="generate_getters_setters_dialog_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/getter_setter_dialog.png" alt="getter setter dialog">
+</div>
+<div class="title">Figure 46. Generate Getters and Setters Dialog</div>
+</div>
+<div class="paragraph">
+<p>Click <strong>Select All</strong> and then <strong>OK</strong>.</p>
+</div>
+<div id="venue_after_getters_setters_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/venue_after_getters_setters.png" alt="venue after getters setters">
+</div>
+<div class="title">Figure 47. Venue.java with gets/sets</div>
+</div>
+<div class="paragraph">
+<p>Now, right-click on the editor, from the pop-up context menu select <strong>Source &#8594; Generate Hibernate/JPA Annotations</strong>.</p>
+</div>
+<div class="paragraph">
+<p>If you are prompted to save <code>Venue.java</code>, simply select OK.</p>
+</div>
+<div id="save_modified_resources_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/save_modified_resources.png" alt="save modified resources">
+</div>
+<div class="title">Figure 48. Save Modified Resources</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Hibernate: add JPA annotations</strong> wizard will start up. First, verify that <code>Venue</code> is the class you are working on.</p>
+</div>
+<div id="hibernate_add_jpa_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/hibernate_add_jpa_annotations.png" alt="hibernate add jpa annotations">
+</div>
+<div class="title">Figure 49. Hibernate: add JPA annotations</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>Next</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The next step in the wizard will provide a sampling of the refactored sources – describing the basic changes that are being made to <code>Venue</code>.</p>
+</div>
+<div id="hibernate_add_jpa_annotations_step2_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/hibernate_add_jpa_annotations_step2.png" alt="hibernate add jpa annotations step2">
+</div>
+<div class="title">Figure 50. Hibernate: add JPA annotations Step 2</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>Finish</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Now you may wish to add the Bean Validation constraint annotations, such as <code>@NotNull</code> to the fields.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployment">Deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At this point, if you have not already deployed the application, right click on the project name in the Project Explorer and select <strong>Run As &#8594; Run on Server</strong>.  If needed, this will startup the application server instance, compile &amp; build the application and push the application into the <code>JBOSS_HOME/standalone/deployments</code> directory.  This directory is scanned for new deployments, so simply placing your war in the directory will cause it to be deployed.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have been using another application server or web server
+such as Tomcat, shut it down now to avoid any port conflicts.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="run_as_run_on_server_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/run_as_run_on_server.png" alt="run as run on server">
+</div>
+<div class="title">Figure 51. Run As &#8594; Run on Server</div>
+</div>
+<div class="paragraph">
+<p>Now, deploy the h2console webapp. It can be found in the JBoss EAP quickstarts. You can read more on how to do this in the <a href="http://www.jboss.org/quickstarts/eap/h2-console/">h2console quickstart</a>.</p>
+</div>
+<div id="h2_console_app_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/quickstarts_directory_layout.png" alt="quickstarts directory layout">
+</div>
+<div class="title">Figure 52. Obtain the H2 console app for deployment</div>
+</div>
+<div class="paragraph">
+<p>You need to deploy the <code>h2console.war</code> application, located in the quickstarts, to the JBoss Application Server. You can deploy this application by copying the WAR file to the <code>$JBOSS_HOME/standalone/deployments</code> directory.</p>
+</div>
+<div id="deploy_h2_console_app_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/h2console_deployments.png" alt="h2console deployments">
+</div>
+<div class="title">Figure 53. Deploy the H2 console app</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Run As &#8594; Run on Server</strong> option will also launch the internal Eclipse browser with the appropriate URL so that you can immediately begin interacting with the application.</p>
+</div>
+<div id="result_run_on_server_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/result_run_on_server.png" alt="result run on server">
+</div>
+<div class="title">Figure 54. Eclipse Browser after Run As &#8594; Run on Server</div>
+</div>
+<div class="paragraph">
+<p>Now, go to <a href="http://localhost:8080/h2console" class="bare">http://localhost:8080/h2console</a> to start up the h2 console.</p>
+</div>
+<div id="h2console_in_browser_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/h2console_in_browser.png" alt="h2console in browser">
+</div>
+<div class="title">Figure 55. h2console in browser</div>
+</div>
+<div class="paragraph">
+<p>Use <code>jdbc:h2:mem:ticket-monster</code> as the JDBC URL (this is defined in <code>src/main/webapp/WEB-INF/ticket-monster-ds.xml</code>), <code>sa</code> as the username and <code>sa</code> as the password.</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Connect</strong></p>
+</div>
+<div class="paragraph">
+<p>You will see both the <code>EVENT</code> table, the <code>VENUE</code> table and the <code>MEMBER</code> tables have been added to the H2 schema.</p>
+</div>
+<div class="paragraph">
+<p>And if you enter the SQL statement: <code>select * from event</code> and select the <strong>Run</strong> (Ctrl-Enter) button, it will display the data you entered in the <code>import.sql</code> file in a previous step.  With these relatively simple steps, you have verified that your new EE 6 JPA entities have been added to the system and deployed successfully, creating the supporting RDBMS schema as needed.</p>
+</div>
+<div id="h2console_select_from_event.png" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/h2console_select_from_event.png" alt="h2console select from event">
+</div>
+<div class="title">Figure 56. h2console Select * from Event</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_jax_rs_restful_web_service">Adding a JAX-RS RESTful web service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The goal of this section of the tutorial is to walk you through the creation of a POJO with the JAX-RS annotations.</p>
+</div>
+<div class="paragraph">
+<p>Right-click on the <code>.rest</code> package, select <strong>New &#8594; Class</strong> from the context menu, and enter <code>EventService</code> as the class name.</p>
+</div>
+<div id="new_class_eventservice_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/new_class_eventservice.png" alt="new class eventservice">
+</div>
+<div class="title">Figure 57. New Class EventService</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>Finish</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Replace the contents of the class with this sample code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="java" class="language-java hljs">package org.jboss.examples.ticketmonster.rest;
+
+@Path("/events")
+@RequestScoped
+public class EventService {
+	@Inject
+	private EntityManager em;
+
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List&lt;Event&gt; getAllEvents() {
+		final List&lt;Event&gt; results =
+			em.createQuery(
+			"select e from Event e order by e.name").getResultList();
+		return results;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This class is a JAX-RS endpoint that returns all Events.</p>
+</div>
+<div id="event_service_copy_paste_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/event_service_copy_paste.png" alt="event service copy paste">
+</div>
+<div class="title">Figure 58. EventService after Copy and Paste</div>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll notice a lot of errors, relating to missing imports. The easiest way to solve this is to right-click inside the editor and select <strong>Source &#8594; Organize Imports</strong> from the context menu.</p>
+</div>
+<div id="source_organize_imports_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/source_organize_imports.png" alt="source organize imports">
+</div>
+<div class="title">Figure 59. Source &#8594; Organize &#8594; Imports</div>
+</div>
+<div class="paragraph">
+<p>Some of the class names are not unique. Eclipse will prompt you with any decisions around what class is intended. Select the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>javax.ws.rs.core.MediaType</code></p>
+</li>
+<li>
+<p><code>org.jboss.examples.ticketmonster.model.Event</code></p>
+</li>
+<li>
+<p><code>javax.ws.rs.Produces</code></p>
+</li>
+<li>
+<p><code>java.util.List</code></p>
+</li>
+<li>
+<p><code>java.inject.Inject</code></p>
+</li>
+<li>
+<p><code>java.enterprise.context.RequestScoped</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following screenshots illustrate how you handle these decisions. The Figure description indicates the name of the class you should select.</p>
+</div>
+<div id="organize_imports_1_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/organize_imports_1.png" alt="organize imports 1">
+</div>
+<div class="title">Figure 60. javax.ws.rs.core.MediaType</div>
+</div>
+<div id="organize_imports_2_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/organize_imports_2.png" alt="organize imports 2">
+</div>
+<div class="title">Figure 61. org.jboss.examples.ticketmonster.model.Event</div>
+</div>
+<div id="organize_imports_3_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/organize_imports_3.png" alt="organize imports 3">
+</div>
+<div class="title">Figure 62. javax.ws.rs.Produces</div>
+</div>
+<div id="organize_imports_4_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/organize_imports_4.png" alt="organize imports 4">
+</div>
+<div class="title">Figure 63. java.util.List</div>
+</div>
+<div id="organize_imports_5_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/organize_imports_5.png" alt="organize imports 5">
+</div>
+<div class="title">Figure 64. javax.inject.Inject</div>
+</div>
+<div id="organize_imports_6_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/organize_imports_6.png" alt="organize imports 6">
+</div>
+<div class="title">Figure 65. javax.enterprise.context.RequestScoped</div>
+</div>
+<div class="paragraph">
+<p>You should end up with these imports:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="java" class="language-java hljs">import java.util.List;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.jboss.examples.ticketmonster.model.Event;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once these import statements are in place you should have no more compilation errors. When you save <code>EventService.java</code>, you will see it listed in JAX-RS REST Web Services in the Project Explorer.</p>
+</div>
+<div id="project_explorer_jax_rs_services_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/project_explorer_jax_rs_services.png" alt="project explorer jax rs services">
+</div>
+<div class="title">Figure 66. Project Explorer JAX-RS Services</div>
+</div>
+<div class="paragraph">
+<p>This feature of JBoss Developer Studio and JBoss Tools provides a nice visual indicator that you have successfully configured your JAX-RS endpoint.</p>
+</div>
+<div class="paragraph">
+<p>You should now redeploy your project via <strong>Run As &#8594; Run on Server</strong>, or by right clicking on the project in the <strong>Servers</strong> tab and select <strong>Full Publish</strong>.</p>
+</div>
+<div id="full_publish_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/full_publish.png" alt="full publish">
+</div>
+<div class="title">Figure 67. Full Publish</div>
+</div>
+<div class="paragraph">
+<p>Using a browser, visit <a href="http://localhost:8080/ticket-monster/rest/events" class="bare">http://localhost:8080/ticket-monster/rest/events</a> to see the results of the query, formatted as JSON (JavaScript Object Notation).</p>
+</div>
+<div id="json_event_results_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/json_event_results.png" alt="json event results">
+</div>
+<div class="title">Figure 68. JSON Response</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>rest</code> prefix is setup in a file called <code>JaxRsActivator.java</code> which contains
+a small bit of code that sets up the application for JAX-RS endpoints.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_jquery_mobile_client_application">Adding a jQuery Mobile client application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, it is time to add a HTML5, jQuery based client application that is optimized for the mobile web experience.</p>
+</div>
+<div class="paragraph">
+<p>There are numerous JavaScript libraries that help you optimize the end-user experience on a mobile web browser. We have found that jQuery Mobile is one of the easier ones to get started with but as your skills mature, you might investigate solutions like Sencha Touch, Zepto or Jo.  This tutorial focuses on jQuery Mobile as the basis for creating the UI layer of the application.</p>
+</div>
+<div class="paragraph">
+<p>The UI components interact with the JAX-RS RESTful services (e.g. <code>EventService.java</code>).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For more information on building HTML5 + REST applications with JBoss technologies, check
+out <a href="http://www.jboss.org/aerogear">Aerogear</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>These next steps will guide you through the creation of a file called <code>mobile.html</code> that provides a mobile friendly version of the application, using jQuery Mobile.</p>
+</div>
+<div class="paragraph">
+<p>First, using the Project Explorer, navigate to <code>src/main/webapp</code>, and right-click on <code>webapp</code>, and choose <strong>New HTML file</strong>.</p>
+</div>
+<div id="new_html_file_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/new_html_file.png" alt="new html file">
+</div>
+<div class="title">Figure 69. New HTML File</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In certain versions of JBoss Developer Studio, the New HTML File Wizard may start
+off with your target location being <code>m2e-wtp/web-resources</code>, this is an
+incorrect location and it is a bug, <a href="https://issues.jboss.org/browse/JBIDE-11472">JBIDE-11472</a>.</p>
+</div>
+<div class="paragraph">
+<p>This issue has been corrected in JBoss Developer Studio 6.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Change directory to <code>ticket-monster/src/main/webapp</code> and enter name the file <code>mobile.html</code>.</p>
+</div>
+<div id="new_html_file_correct_location_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/new_html_file_correct_location.png" alt="new html file correct location">
+</div>
+<div class="title">Figure 70. New HTML File src/main/webapp</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>Next</strong>.</p>
+</div>
+<div class="paragraph">
+<p>On the <strong>Select HTML Template</strong> page of the <strong>New HTML File</strong> wizard, select <strong>New HTML File (5)</strong>.  This template will get you started with a boilerplate HTML5 document.</p>
+</div>
+<div id="select_html_template" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/select_html_template.png" alt="select html template">
+</div>
+<div class="title">Figure 71. Select New HTML File (5) Template</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>Finish</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The document must start with <code>&lt;!DOCTYPE html&gt;</code> as this identifies the page as HTML 5 based. For this particular phase of the tutorial, we are not introducing a bunch of HTML 5 specific concepts like the new form fields (type=email), websockets or the new CSS capabilities.  For now, we simply wish to get our mobile application completed as soon as possible.  The good news is that jQuery and jQuery Mobile make the consumption of a RESTful endpoint very simple.</p>
+</div>
+<div class="paragraph">
+<p>You will now notice the Palette View visible in the JBoss perspective. This view contains a collection of popular jQuery Mobile widgets that can be dragged and dropped into the HTML pages to speed up construction of jQuery Mobile pages.</p>
+</div>
+<div id="jquery_mobile_palette" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jquery_mobile_palette.png" alt="jquery mobile palette">
+</div>
+<div class="title">Figure 72. The jQuery Mobile Palette</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For a deeper dive into the jQuery Mobile palette feature in
+JBoss Developer Studio review <a href="http://vimeo.com/67480300">this video</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let us first set the title of the HTML5 document as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="html" class="language-html hljs">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;TicketMonster&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We shall now add the jQuery and jQuery Mobile JavaScript and CSS files to the HTML document. Luckily for us we can do this by clicking the <em>JS/CSS</em> widget in the palette.</p>
+</div>
+<div id="js_css_widget" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/js_css_widget.png" alt="js css widget">
+</div>
+<div class="title">Figure 73. Click the JS/CSS widget</div>
+</div>
+<div id="js_css_versions" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/js_css_widget_library_versions.png" alt="js css widget library versions">
+</div>
+<div class="title">Figure 74. Select the versions of libraries to add</div>
+</div>
+<div class="paragraph">
+<p>This results in the following document with the jQuery JavaScript file and the jQuery Mobile JavaScript and CSS files being added to the <em>head</em> element.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="html" class="language-html hljs">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" /&gt;
+	&lt;script src="http://code.jquery.com/jquery-2.0.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"&gt;&lt;/script&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;TicketMonster&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We shall now proceed to setup the page layout. Click the <em>page</em> widget in the palette to do so. Ensure that the cursor is in the <code>&lt;body&gt;</code> element of the document when you do so.</p>
+</div>
+<div id="jquery_mobile_page_widget" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jquery_mobile_page_widget.png" alt="jquery mobile page widget">
+</div>
+<div class="title">Figure 75. Click the page widget</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When you click some of the widgets in the palette, it is important
+to have the cursor in the right element of the document.
+Failing to observe this will result in the widget being added in
+undesired locations. Alternatively, you can drag and drop the
+widget to the desired location in the document.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This opens a dialog to configure the jQuery Mobile page.</p>
+</div>
+<div id="jquery_mobile_page" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jquery_mobile_page.png" alt="jquery mobile page">
+</div>
+<div class="title">Figure 76. Create a new jQuery Mobile page</div>
+</div>
+<div class="paragraph">
+<p>Set the page title as "TicketMonster", footer as blank, and the ID as "page1". Click <strong>Finish</strong> to add a new jQuery Mobile page to the document. The layout is now established.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="html" class="language-html hljs">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" /&gt;
+	&lt;script src="http://code.jquery.com/jquery-2.0.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"&gt;&lt;/script&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;TicketMonster&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div data-role="page" id="page1"&gt;
+		&lt;div data-role="header"&gt;
+			&lt;h1&gt;TicketMonster&lt;/h1&gt;
+		&lt;/div&gt;
+		&lt;div data-role="content"&gt;
+			&lt;p&gt;Page content goes here.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div data-role="footer"&gt;
+			&lt;h4&gt;&lt;/h4&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To populate the page content, remove the paragraph element: <code>&lt;p&gt;Page content goes here.&lt;/p&gt;</code> to start with a blank content section. Click the <em>Listview</em> widget in the palette to start populating the content section.</p>
+</div>
+<div id="jquery_mobile_listview_widget" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jquery_mobile_listview_widget.png" alt="jquery mobile listview widget">
+</div>
+<div class="title">Figure 77. Click the Listview widget</div>
+</div>
+<div class="paragraph">
+<p>This opens a new dialog to configure the jQuery Mobile listview widget.</p>
+</div>
+<div id="jquery_mobile_listview" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jquery_mobile_listview.png" alt="jquery mobile listview">
+</div>
+<div class="title">Figure 78. Add a jQuery Mobile Listview widget</div>
+</div>
+<div class="paragraph">
+<p>Select the inset checkbox to display the list as an inset list. Inset lists do not span the entire widget of the display. Set the ID as "listOfItems". Retain the number of items in the list as three, modify the label values to <code>One</code>, <code>Two</code> and <code>Three</code> respectively, and finally, set the URL values to '#'. Retain the default values for the other fields, and click <strong>Finish</strong>. This will create a listview widget with 3 item entries in the list. The jQuery Mobile page is now structurally complete.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="html" class="language-html hljs">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" /&gt;
+	&lt;script src="http://code.jquery.com/jquery-2.0.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"&gt;&lt;/script&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;TicketMonster&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div data-role="page" id="page1"&gt;
+		&lt;div data-role="header"&gt;
+			&lt;h1&gt;TicketMonster&lt;/h1&gt;
+		&lt;/div&gt;
+		&lt;div data-role="content"&gt;
+			&lt;ul data-role="listview" id="listOfItems" data-inset="true"&gt;
+				&lt;li&gt;&lt;a href="#"&gt;One&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Two&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Three&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;div data-role="footer"&gt;
+			&lt;h4&gt;&lt;/h4&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You might notice that in the <strong>Visual Page Editor</strong>, the visual portion is not that attractive, this is because the majority of jQuery Mobile magic happens at runtime and our visual page editor simply displays the HTML without embellishment.</p>
+</div>
+<div class="paragraph">
+<p>Visit <a href="http://localhost:8080/ticket-monster/mobile.html" class="bare">http://localhost:8080/ticket-monster/mobile.html</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Note: Normally HTML files are deployed automatically, if you find it missing,
+just use Full Publish or Run As Run on Server as demonstrated in previous steps.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As soon as the page loads, you can view the jQuery Mobile enhanced page.</p>
+</div>
+<div id="jquery_mobile_template_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jquery_mobile_template.png" alt="jquery mobile template">
+</div>
+<div class="title">Figure 79. jQuery Mobile Template</div>
+</div>
+<div class="paragraph">
+<p>One side benefit of using a HTML5 + jQuery-based front-end to your application is that it allows for fast turnaround in development.  Simply edit the HTML file, save the file and refresh your browser.</p>
+</div>
+<div class="paragraph">
+<p>Now the secret sauce to connecting your front-end to your back-end is simply observing the jQuery Mobile <em>pageinit</em> JavaScript event and including an invocation of the previously created Events JAX-RS service.</p>
+</div>
+<div class="paragraph">
+<p>Insert the following block of code as the last item in the <code>&lt;head&gt;</code> element</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="html" class="language-html hljs">&lt;head&gt;
+    ...
+    &lt;title&gt;TicketMonster&lt;/title&gt;
+    &lt;script type="text/javascript"&gt;
+        $(document).on("pageinit", "#page1", function(event){
+            $.getJSON("rest/events", function(events) {
+                // console.log("returned are " + events);
+                var listOfEvents = $("#listOfItems");
+                listOfEvents.empty();
+                $.each(events, function(index, event) {
+                    // console.log(event.name);
+                    listOfEvents.append("&lt;li&gt;&lt;a href='#'&gt;" + event.name + "&lt;/a&gt;");
+                });
+                listOfEvents.listview("refresh");
+            });
+        });
+    &lt;/script&gt;
+&lt;/head&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>On triggering <em>pageinit</em> on the page having id "page1"</p>
+</li>
+<li>
+<p>using <code>$.getJSON("rest/events")</code> to hit the <code>EventService.java</code></p>
+</li>
+<li>
+<p>a commented out <code>// console.log</code>, causes problems in IE</p>
+</li>
+<li>
+<p>Getting a reference to <code>listOfItems</code> which is declared in the HTML using an <code>id</code> attribute</p>
+</li>
+<li>
+<p>Calling <code>.empty</code> on that list - removing the exiting <code>One, Two, Three</code> items</p>
+</li>
+<li>
+<p>For each event - based on what is returned in step 1<br></p>
+</li>
+<li>
+<p>another commented out <code>// console.log</code></p>
+</li>
+<li>
+<p><code>append</code> the found event to the UL in the HTML</p>
+</li>
+<li>
+<p><code>refresh</code> the <code>listOfItems</code><br></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You may find the <code>.append("&lt;li&gt;&#8230;&#8203;")</code> syntax unattractive, embedding HTML inside
+of the JS .append method, this can be corrected using various JS templating
+techniques.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The result is ready for the average mobile phone. Simply refresh your browser to see the results.</p>
+</div>
+<div id="jquery_mobile_results_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/jquery_mobile_results.png" alt="jquery mobile results">
+</div>
+<div class="title">Figure 80. jQuery Mobile REST Results</div>
+</div>
+<div class="paragraph">
+<p>JBoss Developer Studio and JBoss Tools includes BrowerSim to help you better understand what your mobile application will look like. Look for a "phone" icon in the toolbar, visible in the JBoss Perspective.</p>
+</div>
+<div id="mobile_browsersim_in_toolbar_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/mobile_browsersim_in_toolbar.png" alt="mobile browsersim in toolbar">
+</div>
+<div class="title">Figure 81. Mobile BrowserSim icon in Eclipse Toolbar</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The BrowserSim tool takes advantage of a locally installed Safari (Mac &amp; Windows)
+on your workstation.  It does not package a whole browser by itself.  You will
+need to install Safari on Windows to leverage this feature – but that is more
+economical than having to purchase a MacBook to quickly look at your mobile-web
+focused application!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="mobile_browsersim_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/mobile_browsersim.png" alt="mobile browsersim">
+</div>
+<div class="title">Figure 82. Mobile BrowserSim</div>
+</div>
+<div class="paragraph">
+<p>The Mobile BrowserSim has a Devices menu, on Mac it is in the top menu bar and on Windows it is available via right-click as a pop-up menu.   This menu allows you to change user-agent and dimensions of the browser, plus change the orientation of the device.</p>
+</div>
+<div id="mobile_browsersim_devices_menu_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/mobile_browsersim_devices_menu.png" alt="mobile browsersim devices menu">
+</div>
+<div class="title">Figure 83. Mobile BrowserSim Devices Menu</div>
+</div>
+<div id="mobile_browsersim_windows_menu_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/mobile_browsersim_windows_menu.png" alt="mobile browsersim windows menu">
+</div>
+<div class="title">Figure 84. Mobile BrowserSim on Windows 7</div>
+</div>
+<div class="paragraph">
+<p>You can also add your own custom device/browser types.</p>
+</div>
+<div id="mobile_browsersim_custom_devices_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/mobile_browsersim_custom_devices.png" alt="mobile browsersim custom devices">
+</div>
+<div class="title">Figure 85. Mobile BrowserSim Custom Devices Window</div>
+</div>
+<div class="paragraph">
+<p>Under the <strong>File</strong> menu, you will find a <strong>View Page Source</strong> option that will open up the mobile-version of the website&#8217;s source code inside of JBoss Developer Studio.  This is a very useful feature for learning how other developers are creating their mobile web presence.</p>
+</div>
+<div id="mobile_browsersim_bofa_source_image" class="imageblock">
+<div class="content">
+<img src="gfx/introduction/mobile_browsersim_bofa_source.png" alt="mobile browsersim bofa source">
+</div>
+<div class="title">Figure 86. Mobile BrowserSim View Source</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This concludes our introduction to building HTML5 Mobile Web applications using Java EE 6 with Forge and JBoss Developer Studio. At this point, you should feel confident enough to tackle any of the additional exercises to learn how the TicketMonster sample application is constructed.</p>
+</div>
+<div class="sect2">
+<h3 id="_cleaning_up_the_generated_code">Cleaning up the generated code</h3>
+<div class="paragraph">
+<p>Before we proceed with the tutorial and implement TicketMonster, we need to clean up some of the archetype-generated code. The Member management code, while useful for illustrating the general setup of a Java EE 6 web application, will not be part of TicketMonster, so we can safely remove some packages, classes, and resources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All the Member-related persistence and business code:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>src/main/java/org/jboss/examples/ticketmonster/controller/</code></p>
+</li>
+<li>
+<p><code>src/main/java/org/jboss/examples/ticketmonster/data/</code></p>
+</li>
+<li>
+<p><code>src/main/java/org/jboss/examples/ticketmonster/model/Member.java</code></p>
+</li>
+<li>
+<p><code>src/main/java/org/jboss/examples/ticketmonster/rest/MemberResourceRESTService.java</code></p>
+</li>
+<li>
+<p><code>src/main/java/org/jboss/examples/ticketmonster/service/MemberRegistration.java</code></p>
+</li>
+<li>
+<p><code>src/test/java/org/jboss/examples/ticketmonster/test/MemberRegistrationTest.java</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Generated web content</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>src/main/webapp/index.html</code></p>
+</li>
+<li>
+<p><code>src/main/webapp/index.xhtml</code></p>
+</li>
+<li>
+<p><code>src/main/webapp/WEB-INF/templates/</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>JSF configuration</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>src/main/webapp/WEB-INF/faces-config.xml</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Prototype mobile application (we will generate a proper mobile interface)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>src/main/webapp/mobile.html</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Also, we will update the <code>src/main/resources/import.sql</code> file and remove the <code>Member</code> entity insertion:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="sql" class="language-sql hljs">insert into Member (id, name, email, phone_number) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The data file should contain only the Event data import:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="sql" class="language-sql hljs">insert into Event (id, name, description, major, picture, version) values (1, 'Shane''s Sock Puppets', 'This critically acclaimed masterpiece...', true, 'http://dl.dropbox.com/u/65660684/640px-Carnival_Puppets.jpg', 1);
+insert into Event (id, name, description, major, picture, version) values (2, 'Rock concert of the decade', 'Get ready to rock...', true, 'http://dl.dropbox.com/u/65660684/640px-Weir%2C_Bob_(2007)_2.jpg', 1);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2015-03-04 07:05:48 -0500
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>
